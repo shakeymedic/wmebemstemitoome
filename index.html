@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECG Patterns of Occlusion Myocardial Infarction: A Visual Summary</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+        }
+        .header-swoosh {
+            background: linear-gradient(135deg, #003366 0%, #004b99 100%);
+            border-bottom-left-radius: 50% 20%;
+            border-bottom-right-radius: 50% 20%;
+        }
+        .card {
+            background-color: white;
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .flowchart-node {
+            border-radius: 0.75rem;
+            padding: 1rem;
+            text-align: center;
+            font-weight: 600;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+        }
+    </style>
+</head>
+<body class="antialiased text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8">
+        
+        <!-- Header -->
+        <header class="text-white text-center py-12 px-6 mb-12 header-swoosh">
+            <h1 class="text-3xl md:text-5xl font-bold mb-2">ECG Patterns of Occlusion Myocardial Infarction</h1>
+            <p class="text-lg md:text-xl text-blue-200">A Visual Summary for UK Emergency Clinicians</p>
+        </header>
+
+        <!-- Introduction -->
+        <div class="max-w-4xl mx-auto mb-12">
+            <div class="card p-8 text-center">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Moving Beyond STEMI vs NSTEMI</h2>
+                <p class="text-lg text-gray-600">The traditional STEMI/NSTEMI paradigm misses many acute coronary occlusions. This review advocates for a shift to an <span class="font-bold text-blue-800">Occlusion MI (OMI)</span> vs <span class="font-bold text-gray-700">Non-Occlusion MI (NOMI)</span> model. Recognising subtle ECG patterns is crucial for timely reperfusion and improved patient outcomes. This summary highlights key OMI patterns that don't meet traditional STEMI criteria.</p>
+                <p class="mt-4 text-sm text-gray-500 italic">Based on Ricci F, et al. Ann Emerg Med. 2025;85:330-340.</p>
+            </div>
+        </div>
+
+        <!-- ECG Patterns Section -->
+        <div class="mb-12">
+            <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">Key Occlusion MI (OMI) ECG Patterns</h2>
+            <div class="card p-4 md:p-6">
+                <img src="https://i.imgur.com/Fjzoiq6.jpeg" 
+                     alt="A summary image of twelve different high-risk ECG patterns indicating Occlusion Myocardial Infarction, including Wellens, De Winter, Aslanger, and Sgarbossa criteria." 
+                     class="w-full h-auto rounded-lg">
+            </div>
+        </div>
+        
+        <!-- OMI Pathway Flowchart -->
+        <div class="mb-12">
+             <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">The OMI Pathway</h2>
+             <div class="card p-6 md:p-10">
+                 <div class="flex flex-col items-center">
+                     <!-- Start -->
+                     <div class="flowchart-node bg-gray-200 border-gray-400 border-2 w-full md:w-3/4 lg:w-1/2">Patient with suspected Acute Coronary Syndrome</div>
+                     <div class="w-px h-8 bg-gray-600"></div>
+
+                     <!-- Decision 1 -->
+                     <div class="flowchart-node bg-blue-100 border-blue-400 border-2 w-full md:w-3/4 lg:w-1/2">STEMI criteria fulfilled?</div>
+                     <div class="w-full h-16 relative flex justify-center">
+                         <div class="absolute top-0 left-1/2 -ml-px w-px h-full bg-gray-600"></div>
+                         <div class="absolute top-1/2 left-0 w-1/2 h-px bg-gray-600"></div>
+                         <div class="absolute top-1/2 right-0 w-1/2 h-px bg-gray-600"></div>
+                         <span class="absolute left-1/4 -mt-3 bg-white px-2 text-lg font-semibold text-green-600">YES</span>
+                         <span class="absolute right-1/4 -mt-3 bg-white px-2 text-lg font-semibold text-red-600">NO</span>
+                     </div>
+                     
+                     <!-- Two Branches -->
+                     <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-x-8">
+                         <!-- YES Branch -->
+                         <div class="flex flex-col items-center">
+                             <div class="flowchart-node bg-green-100 border-green-400 border-2 w-full">Exclude other causes of ST elevation (e.g. pericarditis, LVH, Brugada)</div>
+                             <div class="w-px h-8 bg-gray-600"></div>
+                             <div class="flowchart-node bg-green-200 border-green-500 border-2 w-full">Are mimics present?</div>
+                             <div class="w-full h-16 relative flex justify-center">
+                                <div class="absolute top-0 left-1/2 -ml-px w-px h-full bg-gray-600"></div>
+                                <div class="absolute top-1/2 left-0 w-1/2 h-px bg-gray-600"></div>
+                                <div class="absolute top-1/2 right-0 w-1/2 h-px bg-gray-600"></div>
+                                <span class="absolute left-1/4 -mt-3 bg-white px-2 font-semibold">YES</span>
+                                <span class="absolute right-1/4 -mt-3 bg-white px-2 font-semibold">NO</span>
+                             </div>
+                             <div class="w-full grid grid-cols-2 gap-x-4">
+                                <div class="flowchart-node bg-yellow-200 border-yellow-500 border-2">STEMI Mimic</div>
+                                <div class="flowchart-node bg-red-200 border-red-500 border-2">STEMI-OMI</div>
+                             </div>
+                         </div>
+
+                         <!-- NO Branch -->
+                         <div class="flex flex-col items-center mt-8 md:mt-0">
+                             <div class="flowchart-node bg-red-100 border-red-400 border-2 w-full">Consider ECG patterns suggestive of possible OMI</div>
+                             <div class="w-px h-8 bg-gray-600"></div>
+                             <div class="flowchart-node bg-red-200 border-red-500 border-2 w-full">Are they present?</div>
+                              <div class="w-full h-16 relative flex justify-center">
+                                <div class="absolute top-0 left-1/2 -ml-px w-px h-full bg-gray-600"></div>
+                                <div class="absolute top-1/2 left-0 w-1/2 h-px bg-gray-600"></div>
+                                <div class="absolute top-1/2 right-0 w-1/2 h-px bg-gray-600"></div>
+                                <span class="absolute left-1/4 -mt-3 bg-white px-2 font-semibold">YES</span>
+                                <span class="absolute right-1/4 -mt-3 bg-white px-2 font-semibold">NO</span>
+                             </div>
+                             <div class="w-full grid grid-cols-2 gap-x-4">
+                                <div class="flowchart-node bg-orange-200 border-orange-500 border-2">NSTEMI-OMI</div>
+                                <div class="flowchart-node bg-blue-200 border-blue-500 border-2">NSTEMI-NOMI</div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+        </div>
+
+        <!-- Key Takeaways -->
+        <div class="max-w-4xl mx-auto mb-12">
+            <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">Clinical Implications & Takeaways</h2>
+            <div class="card p-8">
+                <div class="space-y-6">
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0">
+                            <svg class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold">High Index of Suspicion:</h4>
+                            <p class="text-gray-600">Around 25-30% of 'NSTEMIs' have an occluded culprit artery. These NSTEMI-OMI patients have worse outcomes than NSTEMI-NOMI patients and benefit from urgent intervention.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0">
+                            <svg class="h-8 w-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold">Look Beyond Millimetres:</h4>
+                            <p class="text-gray-600">The morphology and context of ST-T changes are often more important than absolute millimetre criteria. Use serial ECGs and compare with previous recordings whenever possible.</p>
+                        </div>
+                    </div>
+                     <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0">
+                             <svg class="h-8 w-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold">Dynamic Process:</h4>
+                            <p class="text-gray-600">An ECG is a single snapshot. A patient's coronary artery may occlude, spontaneously reperfuse, and re-occlude. The ECG will change accordingly. Correlate with the patient's symptoms.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0">
+                           <svg class="h-8 w-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a2 2 0 01-2-2V7a2 2 0 012-2h4M5 8h2a2 2 0 012 2v6a2 2 0 01-2 2H5" />
+                           </svg>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold">Discuss and Escalate:</h4>
+                            <p class="text-gray-600">If you see one of these high-risk patterns, even if STEMI criteria are not met, have a low threshold to discuss urgently with cardiology for consideration of early angiography.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="text-center text-sm text-gray-500 py-6">
+            <p>This infographic is a summary and not a substitute for clinical judgment or local guidelines. Always correlate ECG findings with the patient's clinical presentation.</p>
+            <p>&copy; 2025 - Designed for Educational Purposes</p>
+        </footer>
+
+    </div>
+</body>
+</html>
+
