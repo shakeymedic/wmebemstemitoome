@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
@@ -16,6 +15,7 @@
             background: linear-gradient(135deg, #003366 0%, #004b99 100%);
             border-bottom-left-radius: 50% 20%;
             border-bottom-right-radius: 50% 20%;
+            position: relative; /* Added for logo positioning */
         }
         .card {
             background-color: white;
@@ -34,19 +34,26 @@
             font-weight: 600;
             box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
         }
+        .wmebem-logo {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            width: 100px; /* Adjust size as needed */
+        }
     </style>
 </head>
 <body class="antialiased text-gray-800">
 
     <div class="container mx-auto p-4 md:p-8">
-        
-        <!-- Header -->
+
         <header class="text-white text-center py-12 px-6 mb-12 header-swoosh">
+            <a href="https://wmebem.com" target="_blank" rel="noopener noreferrer">
+                <img src="https://iili.io/KGQOvkl.md.png" alt="WMEBEM Logo" class="wmebem-logo">
+            </a>
             <h1 class="text-3xl md:text-5xl font-bold mb-2">ECG Patterns of Occlusion Myocardial Infarction</h1>
             <p class="text-lg md:text-xl text-blue-200">A Visual Summary for UK Emergency Clinicians</p>
         </header>
 
-        <!-- Introduction -->
         <div class="max-w-4xl mx-auto mb-12">
             <div class="card p-8 text-center">
                 <h2 class="text-2xl font-bold text-gray-800 mb-4">Moving Beyond STEMI vs NSTEMI</h2>
@@ -55,26 +62,22 @@
             </div>
         </div>
 
-        <!-- ECG Patterns Section -->
         <div class="mb-12">
             <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">Key Occlusion MI (OMI) ECG Patterns</h2>
             <div class="card p-4 md:p-6">
-                <img src="https://i.imgur.com/Fjzoiq6.jpeg" 
+                <img src="images/IMAGE_NAME.jpeg" 
                      alt="A summary image of twelve different high-risk ECG patterns indicating Occlusion Myocardial Infarction, including Wellens, De Winter, Aslanger, and Sgarbossa criteria." 
                      class="w-full h-auto rounded-lg">
             </div>
         </div>
         
-        <!-- OMI Pathway Flowchart -->
         <div class="mb-12">
              <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">The OMI Pathway</h2>
              <div class="card p-6 md:p-10">
                  <div class="flex flex-col items-center">
-                     <!-- Start -->
                      <div class="flowchart-node bg-gray-200 border-gray-400 border-2 w-full md:w-3/4 lg:w-1/2">Patient with suspected Acute Coronary Syndrome</div>
                      <div class="w-px h-8 bg-gray-600"></div>
 
-                     <!-- Decision 1 -->
                      <div class="flowchart-node bg-blue-100 border-blue-400 border-2 w-full md:w-3/4 lg:w-1/2">STEMI criteria fulfilled?</div>
                      <div class="w-full h-16 relative flex justify-center">
                          <div class="absolute top-0 left-1/2 -ml-px w-px h-full bg-gray-600"></div>
@@ -84,9 +87,7 @@
                          <span class="absolute right-1/4 -mt-3 bg-white px-2 text-lg font-semibold text-red-600">NO</span>
                      </div>
                      
-                     <!-- Two Branches -->
                      <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-x-8">
-                         <!-- YES Branch -->
                          <div class="flex flex-col items-center">
                              <div class="flowchart-node bg-green-100 border-green-400 border-2 w-full">Exclude other causes of ST elevation (e.g. pericarditis, LVH, Brugada)</div>
                              <div class="w-px h-8 bg-gray-600"></div>
@@ -104,7 +105,6 @@
                              </div>
                          </div>
 
-                         <!-- NO Branch -->
                          <div class="flex flex-col items-center mt-8 md:mt-0">
                              <div class="flowchart-node bg-red-100 border-red-400 border-2 w-full">Consider ECG patterns suggestive of possible OMI</div>
                              <div class="w-px h-8 bg-gray-600"></div>
@@ -126,7 +126,6 @@
              </div>
         </div>
 
-        <!-- Key Takeaways -->
         <div class="max-w-4xl mx-auto mb-12">
             <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">Clinical Implications & Takeaways</h2>
             <div class="card p-8">
@@ -180,7 +179,6 @@
             </div>
         </div>
 
-        <!-- Footer -->
         <footer class="text-center text-sm text-gray-500 py-6">
             <p>This infographic is a summary and not a substitute for clinical judgment or local guidelines. Always correlate ECG findings with the patient's clinical presentation.</p>
             <p>&copy; 2025 - Designed for Educational Purposes</p>
@@ -189,4 +187,3 @@
     </div>
 </body>
 </html>
-
